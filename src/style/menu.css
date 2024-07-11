@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Yesteryear&display=swap');
+
+
+section{
+    
+    border-bottom:3px solid #c59d5f;
+    border-top:3px solid #c59d5f;
+    margin: 20px auto;
+    margin-bottom: 0px !important;
+    width: 100vw;
+    height:auto;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: #f2f2f2;
+}
+.menu{
+    
+    width: 400px;
+    display: flex;
+    margin: 10px auto;
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+    font-family: "Pinyon Script";
+    
+}
+span{
+    font-family: "Pinyon Script";
+    font-size: 3rem;
+    margin: 0px 5px;
+}
+#fin{
+    color: #008C45;
+}
+#en{
+    color: #CD212A;
+}
+.titre{
+    color: #c59d5f;
+    text-align: center;
+    font-family: "Pinyon Script";
+    font-size: 2.5rem;
+    
+}
+hr{
+    height: 2px;
+    border-radius: 50%;
+    background-color:#c59d5f ;
+}
+.into{
+    color: #c59d5f;
+    font-family: "Pinyon Script";
+    font-weight: bold;
+    
+}
+#nom{
+    font-size: 1.5rem;
+}
+
+.info{
+   width: fit-content;
+   text-align: center;
+   
+}
+.dedans{
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+
+    section {
+    --sb-track-color: #f2f2f2;
+    --sb-thumb-color: #c59d5f;
+    --sb-size: 10px;
+  }
+  
+    section::-webkit-scrollbar {
+    width: var(--sb-size)
+  }
+  
+    section::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 10px;
+  }
+  
+    section::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+    
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    section {
+      scrollbar-color: var(--sb-thumb-color)
+                       var(--sb-track-color);
+    }
+  }
+
+  @media screen and (max-width: 550px){
+    section{
+    margin: 0;
+    padding: auto;
+    height: 60dvh;
+    width: 100vw;
+    }
+    .dedans{
+        width: 85vw;
+    }
+  }
