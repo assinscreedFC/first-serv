@@ -59,7 +59,7 @@ assinscreedFC
       leur();
     }
   } else {
-    header.innerHTML = `<img src="./rangement/6921-removebg-preview.png" alt="" />
+    header.innerHTML = `<img src="../photo/ico.png" alt="" />
     <nav>
       <ul>
         <li><a href="./index.html">Home</a></li>
@@ -79,7 +79,7 @@ assinscreedFC
         leur();
       }
     } else {
-      header.innerHTML = `<img src="./rangement/6921-removebg-preview.png" alt="" />
+      header.innerHTML = `<img src="../photo/ico.png" alt="" />
       <nav>
         <ul>
           <li><a href="./index.html">Home</a></li>
