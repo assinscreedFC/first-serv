@@ -3,13 +3,13 @@ import fs from "fs";
 import { fileURLToPath } from 'url';
 import { dirname, extname, join } from 'path';
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Obtenir le nom de répertoire actuel dans un module ES
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-export const server = http.createServer(function(req, res) {
+export const server = http.createServer((req, res) => {
     let filePath = req.url === "/" ? "/index.html" : req.url;
     const ext = extname(filePath);
     let contentType = "text/html";
@@ -32,7 +32,7 @@ export const server = http.createServer(function(req, res) {
             contentType = "text/plain";
     }
 
-    fs.readFile(filePath, function(error, data) {
+    fs.readFile(filePath, (error, data) => {
         if (error) {
             res.writeHead(404, { "Content-Type": "text/plain" });
             res.write("Error: File Not Found");
@@ -44,10 +44,10 @@ export const server = http.createServer(function(req, res) {
     });
 });
 
-server.listen(port, function(error) {
+server.listen(port, (error) => {
     if (error) {
         console.log("Error", error);
     } else {
-        console.log("Server is running on port", port);
+        console.log(`Server is running on port ${port}`);
     }
 });
